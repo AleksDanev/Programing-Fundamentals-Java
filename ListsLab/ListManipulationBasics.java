@@ -15,9 +15,33 @@ public class ListManipulationBasics {
 
         String input = scanner.nextLine();
 
-        while (input.equals("end"))
+        while (!input.equals("end")) {
+            String[] commandArr = input.split("\\s");
+            String command = commandArr[0];
 
+            switch (command) {
+                case "Add":
+                    int number = Integer.parseInt(commandArr[1]);
+                    numbersList.add(number);
+                    break;
+                case "Remove":
+                    int numberToRemove = Integer.parseInt(commandArr[1]);
+                    numbersList.remove(Integer.valueOf(numberToRemove));
+                    break;
+                case "RemoveAt":
+                    int indexToRemove = Integer.parseInt(commandArr[1]);
+                    numbersList.remove(indexToRemove);
+                    break;
+                case "Insert":
+                    int numberToAdd = Integer.parseInt(commandArr[1]);
+                    int index = Integer.parseInt(commandArr[2]);
+                    numbersList.add(index, numberToAdd);
+                    break;
+            }
 
             input = scanner.nextLine();
+        }
+
+        System.out.println(numbersList.toString().replaceAll("[\\[\\],]", ""));
     }
 }
