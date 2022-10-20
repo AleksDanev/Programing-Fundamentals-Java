@@ -10,7 +10,7 @@ public class SumAdjacentEqualNumbers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        List<Double> numbersList = Arrays.stream(scanner.nextLine().split("\\s"))
+        List<Double> numbersList = Arrays.stream(scanner.nextLine().split("\\s+"))
                 .map(Double::parseDouble)
                 .collect(Collectors.toList());
 

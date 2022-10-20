@@ -10,10 +10,10 @@ public class MergingLists {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        List<Integer> firstList = Arrays.stream(scanner.nextLine().split("\\s"))
+        List<Integer> firstList = Arrays.stream(scanner.nextLine().split("\\s+"))
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
-        List<Integer> secondList = Arrays.stream(scanner.nextLine().split("\\s"))
+        List<Integer> secondList = Arrays.stream(scanner.nextLine().split("\\s+"))
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
         List<Integer> resultList = new ArrayList<>();

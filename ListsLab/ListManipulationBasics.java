@@ -9,14 +9,14 @@ public class ListManipulationBasics {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        List<Integer> numbersList = Arrays.stream(scanner.nextLine().split("\\s"))
+        List<Integer> numbersList = Arrays.stream(scanner.nextLine().split("\\s+"))
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
 
         String input = scanner.nextLine();
 
         while (!input.equals("end")) {
-            String[] commandArr = input.split("\\s");
+            String[] commandArr = input.split("\\s+");
             String command = commandArr[0];
 
             switch (command) {

@@ -10,7 +10,7 @@ public class RemoveNegativesAndReverse {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        List<Integer> numbersList = Arrays.stream(scanner.nextLine().split("\\s"))
+        List<Integer> numbersList = Arrays.stream(scanner.nextLine().split("\\s+"))
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
 
